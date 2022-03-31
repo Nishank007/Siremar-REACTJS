@@ -1,0 +1,107 @@
+/* // Manasa Mohan kumar (1001869268)
+// K S Pavan Krishna (1001935714)
+// Nishank Girish Gujar (1001861756) */
+
+
+/* Developed by K S Pavan Krishna */
+/* navbar css */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  overflow: hidden;
+  background: black;
+  justify-items: end;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+/* css for the content of navbar */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* css for the menus wrapper in the navbar */
+.navbar-menu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+/* css for the menus in the navbar */
+.navbar-menu-item {
+  margin: 1px;
+  padding: 1px;
+  color: var(--color-white);
+
+}
+
+/* css for menu items */
+.navbar-menu a {
+  font-size: 18px;
+  background: black;
+  color: #FFF;
+  text-decoration: none;
+  padding: 1px 14px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* custom hover design */
+.navbar-menu a:hover:before {
+  width: 100%;
+}
+
+.navbar-menu a.navbar-menu-item-login:hover {
+  color: white;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  padding: 2px;
+}
+
+/* css for the custom left line in the menu */
+.navbar-menu a:before {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  content: '';
+  background: #FFF;
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+
+
+
+/* responsiveness for phone */
+@media only screen and (max-width:480px) {
+  .navbar-menu {
+    justify-content: end;
+
+  }
+  .navbar-menu a {
+    font-size: 11px;
+  }
+  
+}
+
+/* responsiveness for tablets */
+@media only screen and (min-width:481px) {
+  .navbar-menu {
+    justify-content: end;
+  }
+}
+
+/* responsiveness for desktops */
+@media only screen and (min-width:769px) {
+  .navbar-menu {
+    justify-content: end;
+    margin-right: 80px;
+  }
+}
